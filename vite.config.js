@@ -9,6 +9,12 @@ export default defineConfig({
     server: {
         port: 8080,
         hmr: true,
+        resolve: {
+            alias: {
+                '~@coreui': resolve(__dirname, 'node_modules/@coreui/coreui'),
+                '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+            }
+        },
         proxy: {
             '/login': {
                 target: 'http://localhost:8080/pages/account',
@@ -30,5 +36,5 @@ export default defineConfig({
             }
         }
     },
-    
+
 })

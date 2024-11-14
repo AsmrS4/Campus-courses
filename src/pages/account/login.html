@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1><a href="/register">Register</a></h1>
+    <header class="w-100">
+        <nav class="navbar navbar-light bg-secondary text-white">
+            <div class="container-fluid mt-2 mb-2">
+                <span class="navbar-brand mb-0 ms-2 h1 text-white">Кампусные курсы</span>
+                <div class="nav-links"></div>
+                <div class="menu-wrapper me-2">
+                    <span class="ms-3">Регистрация</span>
+                    <span class="ms-3">Вход</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-md d-flex flex-column align-items-center">
+            <form class="login-form " action="#" method="post">
+                <h1 class="d-flex align-self-start mb-3">Авторизация</h1>
+                <div class="col mb-3 w-100">
+                    <label for="login-input" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="login-input" placeholder="user@example.com" required>
+                </div>
+                <div class="col mb-3 w-100">
+                    <label for="password-input" class="col-sm-2 col-form-label">Пароль</label>
+                    <input type="password" class="form-control" id="password-input" required>
+                </div>
+                <button type="button" class="btn btn-primary w-100" id="login-btn">Войти</button>
+            </form>
+            
+        </div>
+    </main>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/account/login.js" type="module"></script>
 </body>
+
 </html>
