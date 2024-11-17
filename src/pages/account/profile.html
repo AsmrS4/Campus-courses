@@ -9,10 +9,51 @@
 </head>
 
 <body>
-    <div class="container py-4 px-3 mx-auto">
-        <h1>Profile Page</h1>
-        <button class="btn btn-primary">Primary button</button>
-    </div>
+    <header class="w-100">
+        <nav class="navbar navbar-light bg-secondary text-white">
+            <div class="container-fluid mt-2 mb-2">
+                <span class="navbar-brand mb-0 ms-2 h1 text-white">Кампусные курсы</span>
+                <div class="nav-links"></div>
+                <div class="menu-wrapper me-2">
+                    <span class="ms-3">
+                        <a href="/register">Регистрация</a>
+                    </span>
+                    <span class="ms-3">
+                        <a href="/login">Вход</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-md d-flex flex-column align-items-center mb-3">
+            <form class="data-form profile-form mt-5" action="#" method="post">
+                <h1 class="d-flex align-self-start mb-5">Профиль</h1>
+                <div class="row mb-3">
+                    <label for="login-field" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control readonly-field" id="login-input" value="user@mail.ru"
+                            readonly>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="username-input" class="col-sm-2 col-form-label">ФИО</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="username-input" minlength="1"
+                            placeholder="Иванов Иван Иванович" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="birthday-input" class="col-sm-2 col-form-label">Дата рождения</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="birthday-input">
+                    </div>
+                </div>
+                <input type="submit" class="btn bg-warning d-flex align-self-end mt-3" id="edit-btn" value="Изменить">
+            </form>
+        </div>
+    </main>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../js/account/profile.js" type="module"></script>
 </body>
 

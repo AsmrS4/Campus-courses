@@ -7,3 +7,11 @@ input {
     font-size: 12px;
     color: #9a9a9a;
 }
+
+.readonly-field {
+    border: none !important;
+}
+
+input::placeholder {
+    color: #b9b9b9 !important;
+}
