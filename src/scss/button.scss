@@ -1,0 +1,16 @@
+button{
+    border-radius: 3px !important;
+}
+
+a:link, a:visited, a:active {
+    color: #fff;
+    text-decoration: none;
+    transition: ease-in-out 0.4s;
+}
+
+a:focus {
+}
+
+a:hover {
+    color: #2a2a2a;
+}

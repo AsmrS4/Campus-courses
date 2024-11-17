@@ -15,27 +15,30 @@
                 <span class="navbar-brand mb-0 ms-2 h1 text-white">Кампусные курсы</span>
                 <div class="nav-links"></div>
                 <div class="menu-wrapper me-2">
-                    <span class="ms-3">Регистрация</span>
-                    <span class="ms-3">Вход</span>
+                    <span class="ms-3">
+                        <a href="/register">Регистрация</a>
+                    </span>
+                    <span class="ms-3">
+                        <a href="/login">Вход</a>
+                    </span>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="container-md d-flex flex-column align-items-center">
-            <form class="login-form " action="#" method="post">
+        <div class="container-md d-flex flex-column align-items-center mb-3">
+            <form class="data-form mt-5" action="#" method="post">
                 <h1 class="d-flex align-self-start mb-3">Авторизация</h1>
                 <div class="col mb-3 w-100">
                     <label for="login-input" class="form-label">Email</label>
                     <input type="email" class="form-control" id="login-input" placeholder="user@example.com" required>
                 </div>
                 <div class="col mb-3 w-100">
-                    <label for="password-input" class="col-sm-2 col-form-label">Пароль</label>
-                    <input type="password" class="form-control" id="password-input" required>
+                    <label for="password-input" class="col-form-label">Пароль</label>
+                    <input type="password" class="form-control" id="password-input" minlength="6" size="10" required>
                 </div>
-                <button type="button" class="btn btn-primary w-100" id="login-btn">Войти</button>
-            </form>
-            
+                <input type="submit"  class="btn btn-primary w-100 mt-3" id="login-btn" value="Войти">
+            </form>        
         </div>
     </main>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

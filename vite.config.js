@@ -12,7 +12,7 @@ export default defineConfig({
         resolve: {
             alias: {
                 '~@coreui': resolve(__dirname, 'node_modules/@coreui/coreui'),
-                '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+                '~bootstrap': resolve(__dirname, 'node_modules/bootstrap')
             }
         },
         proxy: {

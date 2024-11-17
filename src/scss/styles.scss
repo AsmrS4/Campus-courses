@@ -1,10 +1,13 @@
 //@import 'node_modules/normalize.css';
-@import "node_modules/@coreui/coreui/scss/coreui";
+
+@import "bootstrap/scss/bootstrap";
 @import 'variables.scss';
 @import 'mixins.scss';
 @import 'container.scss';
 @import 'card.scss';
 @import 'header.scss';
+@import 'button.scss';
+@import 'input.scss';
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -14,16 +17,25 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
-.login-form {
+.data-form {
     max-width: 768px;
     width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-   
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+}
+
+.register-form {
+    max-width: 996px;
+    width: 100%;
 }
 
 main {
@@ -32,9 +44,5 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-}
 
-input, button{
-    border-radius: 3px !important;
 }
