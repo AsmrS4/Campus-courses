@@ -32,13 +32,11 @@ const register = async () => {
         })
 
         if (result) {
-            console.log(result.token)
             localStorage.setItem('token', result.token);
             localStorage.setItem('login', userEmail);
             window.location.href('/')
 
         } else {
-            console.log(result)
             alert('Этот Email уже занят')
             $('#login-input').addClass('is-invalid')
         }
