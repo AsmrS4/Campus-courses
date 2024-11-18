@@ -2,7 +2,8 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import { ViteAliases } from "vite-aliases";
 import legacy from "@vitejs/plugin-legacy";
-
+import RubyPlugin from 'vite-plugin-ruby'
+import inject from "@rollup/plugin-inject";
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
@@ -15,6 +16,13 @@ export default defineConfig({
                 '~bootstrap': resolve(__dirname, 'node_modules/bootstrap')
             }
         },
+        plugins: [
+            inject({   // => that should be first under plugins array
+                $: 'jquery',
+                jQuery: 'jquery',
+            }),
+            RubyPlugin(),
+        ],
         proxy: {
             '/login': {
                 target: 'http://localhost:8080/pages/account',

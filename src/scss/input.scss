@@ -7,7 +7,9 @@ input {
     font-size: 12px;
     color: $hint-label-color;
 }
-
+.error-label {
+    color: $error-color;
+}
 .readonly-field {
     border: 2px solid $white !important;
     outline-color: $white !important;
