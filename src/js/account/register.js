@@ -34,7 +34,7 @@ const register = async () => {
         if (result) {
             localStorage.setItem('token', result.token);
             localStorage.setItem('login', userEmail);
-            window.location.href('/')
+            window.location.href = '/';
 
         } else {
             alert('Этот Email уже занят')
