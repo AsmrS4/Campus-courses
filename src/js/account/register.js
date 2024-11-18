@@ -35,7 +35,7 @@ const register = async () => {
             console.log(result.token)
             localStorage.setItem('token', result.token);
             localStorage.setItem('login', userEmail);
-            window.location.href('/')
+            window.location.href = '/';
 
         } else {
             console.log(result)
