@@ -5,13 +5,21 @@ input {
 .hint-label {
     margin-left: 4px;
     font-size: 12px;
-    color: #9a9a9a;
+    color: $hint-label-color;
 }
 
 .readonly-field {
-    border: none !important;
+    border: 2px solid $white !important;
+    outline-color: $white !important;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
+
+.readonly-field:focus, .readonly-field:active {
+    outline: 0 !important;
+    outline-offset: 0 !important;
 }
 
 input::placeholder {
-    color: #b9b9b9 !important;
+    color: $placeholder-color !important;
 }

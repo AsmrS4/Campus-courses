@@ -4,3 +4,9 @@
     align-items: center;
     justify-content: space-between;
 }
+
+header {
+    .navbar {
+        background-color: $dark-gray;
+    }
+}
