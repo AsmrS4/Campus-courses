@@ -17,7 +17,7 @@ export default defineConfig({
             }
         },
         plugins: [
-            inject({   // => that should be first under plugins array
+            inject({   
                 $: 'jquery',
                 jQuery: 'jquery',
             }),
