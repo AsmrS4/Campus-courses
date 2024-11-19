@@ -22,10 +22,12 @@
                 </div>
                 <div class="menu-wrapper me-2">
                     <span class="ms-3">
-                        <a href="/register">Регистрация</a>
+                        <a href="/register" class="register-btn">Регистрация</a>
+                        <a href="/profile" class="profile-btn d-none"></a>
                     </span>
                     <span class="ms-3">
-                        <a href="/login">Вход</a>
+                        <a href="/login" class="login-btn">Вход</a>
+                        <a href="#" class="logout-btn d-none">Выход</a>
                     </span>
                 </div>
             </div>
@@ -35,7 +37,7 @@
         <div class="container-md d-flex flex-column align-items-center mb-3">
             <div class="content d-flex flex-column align-items-start">
                 <h1 class="d-flex align-self-start mb-3">Группы кампусных курсов</h1>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                <button type="button" class="btn btn-primary d-none"  id="createGroupBtn" data-bs-toggle="modal"
                     data-bs-target="#createGroupModal">Создать</button>
                 <div class="modal fade" id="createGroupModal" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="createGroupModalLabel" aria-hidden="true">
@@ -56,79 +58,15 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-warning" id="test">Toast</button>
                 <div class="content-holder mt-3">
                     <div class="groups-holder">
-                        <div class="group-item">
+                        <!-- <div class="group-item">
                             <a class="underlined" href="">groupname</a>
                             <div class="group-item-button-wrapper">
                                 <button type="button" class="btn btn-warning">Изменить</button>
                                 <button type="button" class="btn btn-danger">Удалить</button>
                             </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
-                        <div class="group-item">
-                            <a class="underlined" href="">groupname</a>
-                            <div class="group-item-button-wrapper">
-                                <button type="button" class="btn btn-warning">Изменить</button>
-                                <button type="button" class="btn btn-danger">Удалить</button>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

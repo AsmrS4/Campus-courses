@@ -3,6 +3,7 @@ import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 import { editUserProfile, getUserProfile } from '../../api/account';
 import { birthDateIsValid } from '../utils/validation';
+import { logout } from '../../api/account';
 
 
 const getProfile = async () => {
@@ -39,7 +40,17 @@ const editProfile = async () => {
 }
 
 $(window).ready(() => {
+    $('.profile-btn').removeClass('d-none');
+    $('.profile-btn').html(localStorage.getItem('login'));
+    $('.login-btn').addClass('d-none');
+    $('.register-btn').addClass('d-none');
+    $('.logout-btn').removeClass('d-none')
     getProfile();
+})
+
+$('.logout-btn').on('click', async(e) => {
+    e.preventDefault;
+    await logout();
 })
 
 $('#profile-form').submit(e => {

@@ -2,7 +2,11 @@ import '../../scss/styles.scss'
 import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 import { loginUser } from '../../api/account';
+import { getUserRoles } from '../../api/users';
 
+$(window).ready(() => {
+
+})
 
 const login = async () => {
     $('#password-input').removeClass('is-invalid');
@@ -20,11 +24,12 @@ const login = async () => {
     if (result) {
         localStorage.setItem('token', result.token);
         localStorage.setItem('login', userEmail);
-        window.location.href = '/';
+        let roles = await getUserRoles();
+        localStorage.setItem('roles', JSON.stringify(roles));
+        window.location.href = '/groups';
 
     } else {
         $('#password-input').addClass('is-invalid');
-        $('#password-input').val('');
         $('#login-input').addClass('is-invalid');
         $('#login-error-label').removeClass('d-none');
     }

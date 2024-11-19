@@ -67,7 +67,7 @@ export const getUserProfile = async () => {
         } else {
             if (response.status === 401) {
                 localStorage.clear();
-                window.location.href = '/groups'
+                window.location.href = '/login'
                 throw new Error('Unathorized')
             }
             if (response.status === 500) throw new Error('Server Error');
@@ -97,11 +97,36 @@ export const editUserProfile = async (data) => {
         } else {
             if (response.status === 401) {
                 localStorage.clear();
-                window.location.href = '/groups'
+                window.location.href = '/login'
                 throw new Error('Unathorized')
             }
             if (response.status === 500) throw new Error('Server Error');
         }
+    } catch (error) {
+        console.log('Fetch failed with', error)
+    }
+}
+
+export const logout = async() => {
+    let token = localStorage.getItem('token');
+    try {
+        const response = await fetch('https://camp-courses.api.kreosoft.space/logout', {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer " + token
+            }
+        })
+
+        if (response.ok) {
+            localStorage.clear();
+            window.location.href = '/login'
+        } else {
+            if (response.status === 400) throw new Error('Bad request');
+            if (response.status === 500) throw new Error('Server Error');
+        }
+
     } catch (error) {
         console.log('Fetch failed with', error)
     }

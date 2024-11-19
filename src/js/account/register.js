@@ -3,6 +3,7 @@ import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 import { registerNewUser } from '../../api/account';
 import { birthDateIsValid } from '../utils/validation';
+import { getUserRoles } from '../../api/users';
 
 const checkPasswordsIsEqual = async (password, confirmPassword) => {
     return password === confirmPassword;
@@ -34,7 +35,9 @@ const register = async () => {
         if (result) {
             localStorage.setItem('token', result.token);
             localStorage.setItem('login', userEmail);
-            window.location.href = '/';
+            let roles = await getUserRoles();
+            localStorage.setItem('roles', JSON.stringify(roles));
+            window.location.href = '/groups';
 
         } else {
             alert('Этот Email уже занят')
