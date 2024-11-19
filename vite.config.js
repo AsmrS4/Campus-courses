@@ -33,14 +33,15 @@ export default defineConfig({
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/pages\/account\/register.html/, '')
             },
-            '/*': {
-                target: 'http://localhost:8080',
-                rewrite: (path) => path.replace(/^\/index.html/, '')
-            },
             '/profile': {
                 target: 'http://localhost:8080/pages/account',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/pages\/account\/profile.html/, '')
+            },
+            '/groups': {
+                target: 'http://localhost:8080/pages/group',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/pages\/group\/groups.html/, '')
             }
         }
     },

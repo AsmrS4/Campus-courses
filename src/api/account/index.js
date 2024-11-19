@@ -67,7 +67,7 @@ export const getUserProfile = async () => {
         } else {
             if (response.status === 401) {
                 localStorage.clear();
-                window.location.href = '/'
+                window.location.href = '/groups'
                 throw new Error('Unathorized')
             }
             if (response.status === 500) throw new Error('Server Error');
@@ -97,7 +97,7 @@ export const editUserProfile = async (data) => {
         } else {
             if (response.status === 401) {
                 localStorage.clear();
-                window.location.href = '/'
+                window.location.href = '/groups'
                 throw new Error('Unathorized')
             }
             if (response.status === 500) throw new Error('Server Error');
